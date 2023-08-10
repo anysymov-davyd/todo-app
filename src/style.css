@@ -1,0 +1,112 @@
+@font-face {
+  font-family: RubikMedium;
+  src: url('./assets/Rubik-Medium.ttf');
+}
+
+@font-face {
+  font-family: RubikRegular;
+  src: url('./assets/Rubik-Regular.ttf');
+}
+
+html, body{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: RubikRegular;
+  -webkit-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  transition: .2s;
+  background: #f5f5f5;
+}
+
+input{
+  font-family: RubikRegular;
+  outline: none;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.font-light{
+  color: #FFFFFF;
+  transition: .2s;
+}
+.font-dark{
+  color: #161717;
+  transition: .2s;
+}
+
+.card-dark{
+  background-color: #333333;
+}
+.card-light{
+  background-color: #FFFFFF;
+}
+
+.--transparent{
+  opacity: 0;
+}
+
+.--not_transparent{
+  opacity: 1;
+}
+
+.todo__container{
+  border-radius: 8px;
+  padding: 24px 32px;
+  display: inline-flex;
+  max-height: calc(100% - 192px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-direction: column;
+  transition: .2s;
+}
+
+.todo__caption{
+  font-size: 18px;
+  font-family: RubikMedium;
+  margin: 0;
+  padding: 0;
+}
+
+.todo__item{
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  width: 100%;
+}
+
+.todo__notasks{
+  padding: 8px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.todo__input{
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #B4B4B4;
+  border-radius: 6px;
+  padding: 0;
+}
+
+.todo__hide{
+  display: block;
+  text-decoration: underline;
+  font-size: 10px;
+  opacity: .5;
+  cursor: pointer;
+}
+
+.todo__sublist{
+  padding: 8px 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.2s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
