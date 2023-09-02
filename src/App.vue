@@ -160,7 +160,7 @@ export default {
     // Add a new task and refresh the list
     addTask(){
       this.$refs.inputValue.clearInputValue()
-      if(this.inputValue.trim().length > 0){
+      if(this.inputValue.trim().length > 0 && this.items.length < 30){
         this.fetchData()
         const newId = this.generateRandomID()
         const docRef = doc(db, 'tasks', newId)
@@ -224,15 +224,17 @@ export default {
     },
     // Add a new subtask for the choosed task and refresh the list
     handleAddSubTask(value){
-      this.fetchData()
-      const newId = this.generateRandomID()
-      const docRef = doc(db, 'tasks', newId)
-      setDoc(docRef, {
-        parentId: value.id,
-        id: newId,
-        name: value.name,
-        isDone: false
-      })
+      if(this.items.filter(elem => elem.parentId === value.id).length < 30) {
+        this.fetchData()
+        const newId = this.generateRandomID()
+        const docRef = doc(db, 'tasks', newId)
+        setDoc(docRef, {
+          parentId: value.id,
+          id: newId,
+          name: value.name,
+          isDone: false
+        })
+      }
     },
     // A event, when user switches the theme color
     handleSwitch(){

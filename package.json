@@ -1,17 +1,19 @@
 {
-  "name": "portfolio",
+  "homepage": "http://anysymov-davyd.github.io/todo-app",
+  "name": "todo-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "deploy": "gh-pages -d build",
+    "predeploy": "vite build",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "firebase": "^10.0.0",
-    "vue": "^3.3.4",
-    "vuedraggable": "^4.1.0"
+    "vue": "^3.3.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
