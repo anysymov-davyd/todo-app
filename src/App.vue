@@ -65,23 +65,14 @@
 // Import libraries and components
 import { initializeApp } from 'firebase/app'
 import { getFirestore, collection, getDocs, deleteDoc, doc, setDoc } from 'firebase/firestore'
+import firebaseConfig from './db_config'
 
 import Switch from './components/Switch.vue'
 import Checkbox from './components/Checkbox.vue'
 import Button from './components/Button.vue'
 import Input from './components/Input.vue'
 
-
 // Database connection
-const firebaseConfig = {
-  apiKey: 'AIzaSyASw3BWFO9_VNAJAvmIbjTg69O370aOado',
-  authDomain: 'todo-app-6d8fc.firebaseapp.com',
-  projectId: 'todo-app-6d8fc',
-  storageBucket: 'todo-app-6d8fc.appspot.com',
-  messagingSenderId: '579218758699',
-  appId: '1:579218758699:web:04cf3d0757e849572e9e6e'
-}
-
 const app = initializeApp(firebaseConfig)
 const db = getFirestore(app)
 
