@@ -12,10 +12,10 @@
                 <IconButton v-if="!isAdding && !isDone && !isChild" :iconName="'add'" :darkMode="darkMode" @click="switchAddTask"/>
                 <IconButton v-if="isAdding && !isDone && !isChild" :iconName="'cancel'" :darkMode="darkMode" @click="switchAddTask"/>
                 <IconButton :iconName="'edit'" :darkMode="darkMode" @click="switchChangeTask"/>
-                <IconButton :iconName="'delete'" :darkMode="darkMode" @mousedown="deleteTask"/>
+                <IconButton :iconName="'delete'" :darkMode="darkMode" @click="deleteTask"/>
             </div>
             <div v-else class="checkbox__icons">
-                <IconButton :iconName="'apply'" :darkMode="darkMode" click="changeTask"/>
+                <IconButton :iconName="'apply'" :darkMode="darkMode" @click="changeTask"/>
                 <IconButton :iconName="'cancel'" :darkMode="darkMode" @click="switchChangeTask"/>
             </div>
         </div>
@@ -159,11 +159,10 @@ export default {
 
     .checkbox__value{
         display: block;
-        line-height: 25px;
-        width: 200px;
+        line-height: 15px;
         text-overflow: ellipsis;
-        white-space: nowrap;
         overflow: hidden;
+        margin-top: 5px;
     }
 
     .checkbox__container{
@@ -185,7 +184,6 @@ export default {
         -webkit-user-select: none;
         user-select: none;
         word-wrap: break-word;
-        height: 25px;
     }
 
     .container .checkbox__rawinput {

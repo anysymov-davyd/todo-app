@@ -64,7 +64,7 @@
 <script>
 // Import libraries and components
 import { initializeApp } from 'firebase/app'
-import { getFirestore, collection, getDocs, deleteDoc, doc, setDoc, query } from 'firebase/firestore'
+import { getFirestore, collection, getDocs, deleteDoc, doc, setDoc } from 'firebase/firestore'
 
 import Switch from './components/Switch.vue'
 import Checkbox from './components/Checkbox.vue'

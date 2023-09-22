@@ -1,0 +1,63 @@
+@media (max-width: 768px) {
+    .todo__container {
+      box-sizing: border-box;
+      width: 100vw;
+      height: 100vh;
+      max-height: 100vh;
+      border-radius: 0;
+    }
+    div.checkbox__icons {
+      opacity: 1;
+      gap: 0;
+    }
+    .container span {
+      font-size: 10px;
+    }
+    span.checkmark {
+      width: 15px;
+      height: 15px;
+      margin-top: 3px;
+      border-radius: 3px;
+    }
+    span.checkmark:after {
+      left: 0.5px;
+      top: 2px;
+      scale: 0.75;
+    }
+    label.container {
+      padding-left: 30px;
+    }
+    input.checkbox__input {
+      font-size: 10px;
+      width: 100%;
+    }
+    div.checkbox__container {
+      padding-left: 12px;
+    }
+    div.todo__item {
+      padding: 4px 0;
+    }
+    div.checkbox__container {
+      gap: 24px;
+    }
+    input.checkbox__add-input {
+      font-size: 10px;
+      height: 26px;
+    }
+    svg.checkbox__add-button {
+      padding: 8px 10px;
+    }
+    input.todo__inputbox {
+      padding: 5px 14px;
+      font-size: 12px;
+    }
+    svg.todo__button {
+      padding: 5px 11.75px;
+    }
+    h3.todo__caption {
+      font-size: 12px;
+    }
+    div.todo__hide {
+      font-size: 8px;
+    }
+  }
